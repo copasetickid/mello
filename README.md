@@ -1,7 +1,7 @@
-# README
+# Mello
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mello is a Trello clone; Trello is a web app that lets you work more collaboratively and get more done.
+Built using Ruby on Rails, React & Redux.
 
 Things you may want to cover:
 
