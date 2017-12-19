@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171215215036) do
+ActiveRecord::Schema.define(version: 20171219214247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "board_members", force: :cascade do |t|
+    t.integer "board_id", null: false
+    t.integer "member_id", null: false
+    t.boolean "admin", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id", "member_id"], name: "index_board_members_on_board_id_and_member_id", unique: true
+    t.index ["board_id"], name: "index_board_members_on_board_id"
+    t.index ["member_id"], name: "index_board_members_on_member_id"
+  end
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
