@@ -4,6 +4,5 @@ FactoryBot.define do
     password 'password'
     first_name 'Tori'
     last_name 'Kelly'
-    username  'TK'
   end
 end
